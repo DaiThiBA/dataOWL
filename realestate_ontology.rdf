@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/thi/ontologies/2024/8/realestate#Owner">
+    <rdfs:label>Owner of the real estate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/thi/ontologies/2024/8/realestate#price">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/thi/ontologies/2024/8/realestate#RealEstate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/thi/ontologies/2024/8/realestate#hasOwner">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/thi/ontologies/2024/8/realestate#RealEstate"/>
+    <rdfs:range rdf:resource="http://example.org/thi/ontologies/2024/8/realestate#Owner"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/thi/ontologies/2024/8/realestate#RealEstate">
+    <rdfs:label>Real estate property</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/thi/ontologies/2024/8/realestate#size">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/thi/ontologies/2024/8/realestate#RealEstate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/thi/ontologies/2024/8/realestate#Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/thi/ontologies/2024/8/realestate#Teacher"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/thi/ontologies/2024/8/realestate#Student">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/thi/ontologies/2024/8/realestate#Person"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/thi/ontologies/2024/8/realestate#Teacher"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/thi/ontologies/2024/8/realestate#locatedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/thi/ontologies/2024/8/realestate#RealEstate"/>
+    <rdfs:range rdf:resource="http://example.org/thi/ontologies/2024/8/realestate#Location"/>
+    <rdfs:label>Real estate is located in a specific location</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/thi/ontologies/2024/8/realestate#Feature">
+    <rdfs:label>Feature of the real estate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/thi/ontologies/2024/8/realestate#partOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/thi/ontologies/2024/8/realestate#District"/>
+    <rdfs:range rdf:resource="http://example.org/thi/ontologies/2024/8/realestate#Province"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/thi/ontologies/2024/8/realestate#hasFeature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/thi/ontologies/2024/8/realestate#RealEstate"/>
+    <rdfs:range rdf:resource="http://example.org/thi/ontologies/2024/8/realestate#Feature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/thi/ontologies/2024/8/realestate#Teacher">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/thi/ontologies/2024/8/realestate#Person"/>
+  </rdf:Description>
+</rdf:RDF>
